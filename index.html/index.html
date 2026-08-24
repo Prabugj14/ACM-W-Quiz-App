@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACM-W Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="screen">
+            <h1>🎯 ACM-W Quiz Challenge</h1>
+            <p>Test your knowledge about ACM and Artificial Intelligence!</p>
+            <div class="quiz-info">
+                <p>📝 <strong>10 Questions</strong></p>
+                <p>⏱️ <strong>Multiple Choice</strong></p>
+                <p>🏆 <strong>Score & Results</strong></p>
+            </div>
+            <button id="start-btn" class="btn-primary">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen hidden">
+            <div class="quiz-header">
+                <div class="progress-bar">
+                    <div id="progress" class="progress"></div>
+                </div>
+                <p>Question <span id="question-number">1</span> of <span id="total-questions">10</span></p>
+            </div>
+            
+            <h2 id="question-text">Question goes here?</h2>
+            
+            <div id="options-container" class="options">
+                <!-- Options will be generated here -->
+            </div>
+            
+            <button id="next-btn" class="btn-primary" disabled>Next Question</button>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="screen hidden">
+            <h1> Quiz Completed!</h1>
+            <div class="score-card">
+                <h2>Your Score</h2>
+                <div class="score" id="final-score">0/10</div>
+                <p id="score-message"></p>
+            </div>
+            <div class="results-detail" id="results-detail"></div>
+            <button id="restart-btn" class="btn-primary">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
